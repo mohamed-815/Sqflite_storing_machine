@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1039246213945",
+    "project_id": "sqfire-f0d3a",
+    "storage_bucket": "sqfire-f0d3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039246213945:android:815243204e24be29501ee8",
+        "android_client_info": {
+          "package_name": "com.example.login_storingdata_sqflite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039246213945-amr4l99v9sj983s67vp6nq819a94u8j4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.login_storingdata_sqflite",
+            "certificate_hash": "31c51a06870b29f72a0055a46d8d72319ea2b926"
+          }
+        },
+        {
+          "client_id": "1039246213945-tl7ahmcjeg888uvpprb3ffl5usdu50mu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0c6y-1pzY7s4v8bLerTcXecAfdBmWp_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039246213945-tl7ahmcjeg888uvpprb3ffl5usdu50mu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
