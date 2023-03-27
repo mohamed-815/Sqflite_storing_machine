@@ -5,6 +5,7 @@ import 'package:login_storingdata_sqflite/core/consts/const.dart';
 import 'package:login_storingdata_sqflite/view/commonwidgets/customfont.dart';
 import 'package:login_storingdata_sqflite/view/commonwidgets/customtextformfiled.dart';
 import 'package:login_storingdata_sqflite/view/commonwidgets/widgets.dart';
+import 'package:login_storingdata_sqflite/view/forgotpassword/forgotpassword.dart';
 import 'package:login_storingdata_sqflite/view/reginsterpage/reginster.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -55,16 +56,26 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (_formKey.currentState!.validate()) {
                         _formKey.currentState!.save();
                         // TODO: Implement login logic with _email and _password
-                        LoginController().register(_email.text, _password.text);
+                        LoginController().login(_email.text, _password.text);
                       }
                     },
                     child: Text('Login'),
                   ),
-                  GestureDetector(
-                      onTap: () {
-                        Get.to(ReginsterPage());
-                      },
-                      child: CustomFont(item: "Creat New", size: 20))
+                  Column(
+                    children: [
+                      GestureDetector(
+                          onTap: () {
+                            Get.to(ReginsterPage());
+                          },
+                          child: CustomFontHead(item: "Creat New", size: 20)),
+                      GestureDetector(
+                          onTap: () {
+                            Get.off(ForgotPasswordPage());
+                          },
+                          child: CustomFontHead(
+                              item: "forget password", size: 15)),
+                    ],
+                  )
                 ],
               ),
             ],

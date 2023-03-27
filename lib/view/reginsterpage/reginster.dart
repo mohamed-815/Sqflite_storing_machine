@@ -1,10 +1,13 @@
 import 'dart:developer';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_storingdata_sqflite/controller/emailcontroller.dart';
 import 'package:login_storingdata_sqflite/view/commonwidgets/customtextformfiled.dart';
 import 'package:login_storingdata_sqflite/view/commonwidgets/widgets.dart';
+import 'package:login_storingdata_sqflite/view/homepage/personaldata.dart';
 
 class ReginsterPage extends StatefulWidget {
   @override
@@ -63,6 +66,9 @@ class _ReginsterPageState extends State<ReginsterPage> {
                       LoginController().register(_email.text.trim().toString(),
                           _password.text.trim().toString());
                       // TODO: Implement login logic with _email and _password
+                      if (FirebaseAuth.instance.currentUser != null) {
+                        Get.to(PersonalData());
+                      }
                     }
                   } else {
                     Get.snackbar('Password', "Password is not equal",
